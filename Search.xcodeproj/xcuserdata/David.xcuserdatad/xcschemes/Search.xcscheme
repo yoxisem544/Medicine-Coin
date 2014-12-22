@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2E84B04E18E326CB00BA2656"
-               BuildableName = "Search.app"
-               BlueprintName = "Search"
+               BuildableName = "Medicine Coin.app"
+               BlueprintName = "Medicine Coin"
                ReferencedContainer = "container:Search.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -57,8 +57,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2E84B04E18E326CB00BA2656"
-            BuildableName = "Search.app"
-            BlueprintName = "Search"
+            BuildableName = "Medicine Coin.app"
+            BlueprintName = "Medicine Coin"
             ReferencedContainer = "container:Search.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -76,8 +76,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2E84B04E18E326CB00BA2656"
-            BuildableName = "Search.app"
-            BlueprintName = "Search"
+            BuildableName = "Medicine Coin.app"
+            BlueprintName = "Medicine Coin"
             ReferencedContainer = "container:Search.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -94,8 +94,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2E84B04E18E326CB00BA2656"
-            BuildableName = "Search.app"
-            BlueprintName = "Search"
+            BuildableName = "Medicine Coin.app"
+            BlueprintName = "Medicine Coin"
             ReferencedContainer = "container:Search.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

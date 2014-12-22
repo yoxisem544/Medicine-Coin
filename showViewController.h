@@ -9,5 +9,5 @@
 #import "ViewController.h"
 
 @interface showViewController : ViewController
-
+- (void) settitle:(NSString *)title content:(NSString *)content;
 @end

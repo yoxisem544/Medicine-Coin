@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "showViewController.h"
 
 @interface ViewController ()
 
@@ -14,6 +15,8 @@
 @property (strong, nonatomic) NSArray *searchResults;
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 
+@property (strong, nonatomic) NSString * nametodisplay;
+@property (strong, nonatomic) NSString * contenttodisplay;
 @end
 
 @implementation ViewController
@@ -21,7 +24,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"name" ofType:@"json"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"engname" ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:filePath];
     NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
     
@@ -93,8 +96,33 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableView *cell = [tableView cellForRowAtIndexPath:indexPath];
-    NSLog([NSString stringWithFormat:@"%@",cell]);
+    NSString *text = [NSString stringWithFormat:@"%@", cell];
+    NSArray *sp = [text componentsSeparatedByString:@";"];
+    for (NSString * key in sp) {
+        //        NSLog(@"log=%@\n", key);
+    }
+    
+    
+    NSString *name = sp[3];
+    
+    sp = [name componentsSeparatedByString:@" "];
+    for (NSString * key in sp) {
+        //        NSLog(@"text log=%@\n", key);
+    }
+    NSString *endName = sp[3];
+    
+    
+    NSLog(endName);
+
+    
+    NSLog(@"nameofmed=%@", endName);
+    self.nametodisplay = endName;
+    self.contenttodisplay = endName;
+    NSLog(@"ready to segue%@", self.contenttodisplay);
+    
+    
     [self performSegueWithIdentifier:@"showMedicine" sender:self];
+    
 }
 //- (void)touchesEnded:(NSSet *)touches
 //           withEvent:(UIEvent *)event {
@@ -110,13 +138,8 @@
     NSLog(@"segue from deals screen");
     //addToCartViewContollerForItem
     if([[segue identifier] isEqualToString:@"showMedicine"]){
-//        NSIndexPath *selectedRow = [self.tableView indexPathForSelectedRow];
-//        
-//        Item *currentItem = [[Item alloc]init];
-//        currentItem = [itemList objectAtIndex:[selectedRow row]];
-//        
-//        RESTAddToCartViewController *vc = [segue destinationViewController];
-//        [vc setCurrentItem:currentItem];
+        NSLog(@"test segue%@",self.nametodisplay);
+        [[segue destinationViewController] settitle:self.nametodisplay content:self.contenttodisplay];
     }
 }
 - (IBAction)backButton:(id)sender {

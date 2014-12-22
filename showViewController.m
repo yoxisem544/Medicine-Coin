@@ -9,6 +9,8 @@
 #import "showViewController.h"
 
 @interface showViewController ()
+@property (weak, nonatomic) IBOutlet UINavigationItem *nameTitle;
+
 
 @end
 
@@ -17,6 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSLog(@"another view did load");
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +38,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void) settitle:(NSString *)title content:(NSString *)content
+{
+    self.nameTitle.title = title;
+}
+
 
 @end

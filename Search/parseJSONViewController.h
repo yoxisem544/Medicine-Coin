@@ -10,4 +10,9 @@
 
 @interface parseJSONViewController : UIViewController
 
+@property (strong, nonatomic) NSDictionary *dinamicData;
+@property (strong, nonatomic) NSData *localData;
+@property (strong, nonatomic) NSDictionary *json;
+
+- (void)startDownloading;
 @end
